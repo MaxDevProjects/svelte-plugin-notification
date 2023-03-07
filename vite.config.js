@@ -1,23 +1,23 @@
 import { defineConfig } from 'vite'
 import { svelte } from '@sveltejs/vite-plugin-svelte'
+import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [svelte({
-    css: {
-      outputFilename: 'main.svelte-p.css', // Nom de fichier personnalisé pour les fichiers CSS générés
-    },
-  })],
+  plugins: [svelte()],
   build: {
-    outDir: 'public/dist', // Chemin de sortie pour les fichiers générés
     rollupOptions: {
-      input: './src/main.js',
+      input: {
+        public: resolve(__dirname, 'src/public.js'),
+        admin: resolve(__dirname, 'src/admin.js')
+      },
       output: {
-        entryFileNames: 'bundle.svelte-p.js', // Nom de fichier personnalisé pour le bundle
-        chunkFileNames: '[name].js', // Nom de fichier personnalisé pour les chunks
-        assetFileNames: 'main.svelte-p.[ext]',
+        entryFileNames: '[name].js',
+        chunkFileNames: '[name].js',
+        assetFileNames: '[name].[ext]',
       },
     },
+    outDir: './dist',
   },
   server: {
     watch: {

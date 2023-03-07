@@ -5,4 +5,4 @@ const app = new App({
   target: document.getElementById('svelte-p'),
 })
 
-export default app
+export default app;

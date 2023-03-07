@@ -45,6 +45,7 @@
     height: 100%;
     display: flex;
     flex-direction: row-reverse;
+    overflow: hidden;
 }
 
 .vertical-bar {
