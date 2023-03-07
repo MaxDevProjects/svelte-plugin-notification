@@ -10,6 +10,8 @@ npm install
 npm build
 ```
 
-Active le dans ton administrateur wordpress dans "extensions"
+- Active le plugin dans ton administrateur wordpress dans "extensions"
 
-Test sur la page d'accueil ton site wordpress 🪄
+- Test sur la page d'accueil ton site wordpress 🪄
+
+- Test l'affichage depuis le menu d'administration "svelte notification" de ton wordpress
