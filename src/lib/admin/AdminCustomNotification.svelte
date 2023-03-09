@@ -29,6 +29,9 @@
 </div>
 
 <style>
+    .customize-color {
+        display: flex;
+    }
     .customize-container {
         display: flex;
         align-items: center;
@@ -42,13 +45,6 @@
     .customize-animation select {
         width: 100%;
     }
-    .close {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 8px;
-        cursor: pointer;
-    }
     .notif-container {
         width: 256px;
         height: 100%;
@@ -56,7 +52,6 @@
         flex-direction: row-reverse;
         overflow: hidden;
     }
-
     .vertical-bar {
         display: block;
         width: 12px;
@@ -68,8 +63,11 @@
         color: #333333;
         background-color: #f9f9f9;
     }
-
-    a {
-        color: #8C9EFF;
+    select, input:not([type='color']) {
+        padding: .3rem;
+    }
+    input[type='color'] {
+        width: 32px;
+        height: 32px;
     }
 </style>
